@@ -74,14 +74,27 @@ function buildCharts(sample) {
     var yticks = 
 
     // 8. Create the trace for the bar chart. 
+
+    // var trace2 = {
+    //   x: data.map(row => row.pair),
+    //   y: data.map(row => row.romanSearchResults),
+    //   text: data.map(row => row.romanName),
+    //   name: "Roman",
+    //   type: "bar"
+    // };
+    
     var barData = [
       
     ];
     // 9. Create the layout for the bar chart. 
     var barLayout = {
+      //var layout = {
+  //title: "Greek vs Roman gods search results",
+  //barmode: "group"
+};
      
     };
     // 10. Use Plotly to plot the data with the layout. 
-    
+    //Plotly.newPlot("plot", traceData, layout);
   });
 }
