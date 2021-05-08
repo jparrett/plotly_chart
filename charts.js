@@ -140,7 +140,18 @@ console.log(otuIds);
       {
         domain: { x: [0, 1], y: [0, 1] },
         value: wFreq,
-        title: { text: "Belly Button Washing Frequency" },
+        title: { text: "<b>Belly Button Washing Frequency</b><br>Scrubs per Week" },
+        gauge: {
+          axis: {range: [0, 10]},
+          bar: { color: "black" },
+          steps: [
+            { range: [0, 2], color: "red" },
+            { range: [2, 4], color: "orange" },
+            {range: [4, 6], color: "yellow" },
+            {range: [6, 8], color: "limegreen"},
+            {range: [8, 10], color: "green" }
+          ],
+        },
         type: "indicator",
         mode: "gauge+number"
       }
@@ -148,7 +159,7 @@ console.log(otuIds);
     ];
   
     // 5. Create the layout for the gauge chart.
-    var gaugeLayout =  { width: 600, height: 500, margin: { t: 0, b: 0 } };
+    var gaugeLayout =  {margin: { t: 0, b: 0 } };
      
     // 6. Use Plotly to plot the gauge data and layout.
     Plotly.newPlot('gauge', gaugeData, gaugeLayout);
