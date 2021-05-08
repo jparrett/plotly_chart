@@ -1,0 +1,14 @@
+body {
+    font-family: American Typewriter, serif;
+    color: rgb(21, 4, 61);
+  }
+
+.container{
+  background-color: rgb(175, 173, 171);
+}
+
+  .jumbotron {
+    background-image: url("./belly.jpeg");
+    background-size: 100% 100%;
+    text-align: center;
+  }
