@@ -137,16 +137,21 @@ console.log(otuIds);
     
     // 4. Create the trace for the gauge chart.
     var gaugeData = [
-     
+      {
+        domain: { x: [0, 1], y: [0, 1] },
+        value: wFreq,
+        title: { text: "Belly Button Washing Frequency" },
+        type: "indicator",
+        mode: "gauge+number"
+      }
+      
     ];
-    
+  
     // 5. Create the layout for the gauge chart.
-    var gaugeLayout = { 
+    var gaugeLayout =  { width: 600, height: 500, margin: { t: 0, b: 0 } };
      
-    };
-
     // 6. Use Plotly to plot the gauge data and layout.
-    
+    Plotly.newPlot('gauge', gaugeData, gaugeLayout);
 
 
 
