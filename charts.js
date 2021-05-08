@@ -124,17 +124,17 @@ console.log(otuIds);
     Plotly.newPlot('bubble', bubbleData, bubbleLayout);
 
 // 1. Create a variable that filters the metadata array for the object with the desired sample number.
-
+    var metaArray = data.metadata;
     // Create a variable that holds the first sample in the array.
-  
+    var metaResultArray = metaArray.filter(metaObj => metaObj.id == sample);
 
     // 2. Create a variable that holds the first sample in the metadata array.
-    
-
-    // Create variables that hold the otu_ids, otu_labels, and sample_values.
-
+    var metaResult = metaResultArray[0];
 
     // 3. Create a variable that holds the washing frequency.
+    var wFreq = parseFloat(metaResult.wfreq).toFixed(2);
+    console.log(wFreq);
+    
     // 4. Create the trace for the gauge chart.
     var gaugeData = [
      
