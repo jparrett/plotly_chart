@@ -103,12 +103,11 @@ console.log(otuIds);
       x: otuIds,
       y: sampleValues,
       text: otuLabels,
-      //x: otuIds.slice(0,10).reverse(),
-      //y: sampleValues.slice(0,10).reverse(),
       mode: 'markers',
       marker: {
         color: otuIds,
-        size: sampleValues
+        size: sampleValues,
+        colorscale: "Earth"
       }
     };
     var bubbleData = [trace1];
@@ -116,9 +115,8 @@ console.log(otuIds);
     // 2. Create the layout for the bubble chart.
     var bubbleLayout = {
       title: 'Bacteria Cultures Per Sample',
-      showlegend: false,
-      height: 600,
-      width: 600 
+      xaxis: {title: "OTU ID" },
+      showlegend: false
     };
 
     // 3. Use Plotly to plot the data with the layout
